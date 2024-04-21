@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // curl post request
+            "label": "simple post",
+            "type": "shell",
+            "command": "curl -X POST -H \"Content-Type: application/json\" -d '{\"name\":\"Your Name\"}' http://localhost:8080/v1/create",
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "User Your Name created!"
+                },
+            }
+        },
+        {
+            // curl get request
+            "label": "simple get",
+            "type": "shell",
+            "command": "curl http://localhost:8080/v1/hello",
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "Hello, John Doe!"
+                }
+            }
+        }
+    ]
+}
